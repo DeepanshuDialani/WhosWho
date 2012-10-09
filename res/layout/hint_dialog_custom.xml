@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+ 
+    <TextView
+        android:id="@+id/hint_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#151515"
+        android:textSize="18dp"
+		android:layout_centerHorizontal="true"
+  />
+	<View 
+        android:id="@+id/rule3"
+        android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:layout_marginTop="5dp"
+		android:layout_below="@id/hint_title"
+		android:background="#918E90" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/rule3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#151515" 
+        android:gravity="center"
+        />
+
+     <Button 
+        android:id="@+id/dialogButtonOK"
+        android:text="Okay" 
+        android:background="@drawable/btn_yellow_clicked" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hint"
+        style="@style/ButtonText3" 
+        android:layout_marginTop="12dp"
+        android:layout_width="fill_parent"
+      />
+ 
+</RelativeLayout>
+</ScrollView>

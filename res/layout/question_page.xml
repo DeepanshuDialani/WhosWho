@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/main_background"
+	android:orientation="vertical"
+    android:gravity="center_horizontal">
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+	android:orientation="horizontal"
+	android:background="#151515" 
+ >
+ <Button 
+        android:id="@+id/score"
+        android:text="100" 
+        style="@style/StyleSkip"
+        android:textSize="16dp"
+        android:textColor="#DCDEE3"
+        android:layout_centerVertical="true" 
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/hint_icon5"
+        android:drawablePadding="2dp"
+        android:paddingLeft="7dp"
+		android:paddingTop="7dp"
+		android:paddingRight="7dp"
+		android:paddingBottom="7dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        /> 
+ <TextView
+	    android:id="@+id/title2"
+	    android:gravity="center"
+	    android:text="Who's Who?"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="#f3ae1b"
+	    android:layout_toRightOf="@id/score"
+	    android:layout_toLeftOf="@+id/countdown"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:textSize="18dp"
+
+	    android:textStyle="bold"
+	    android:shadowColor="#000000"
+	    android:shadowDx="1"
+	    android:shadowDy="1"
+	    android:shadowRadius="4"
+	   />
+ <Button
+    android:id="@+id/countdown"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:textStyle="bold"
+	android:textColor="#DCDEE3"
+	android:textSize="16dp"
+	android:gravity="center"
+	android:drawableLeft="@drawable/timer_icon"
+    android:drawablePadding="3dp"
+	android:layout_marginRight="16dp"
+	android:layout_centerVertical="true"
+	android:background="@color/transparent"
+	android:paddingLeft="7dp"
+	android:layout_alignParentRight="true"
+	android:paddingTop="7dp"
+	android:paddingRight="7dp"
+	android:paddingBottom="7dp"
+	
+    /><!-- 
+ <Button
+    android:id="@+id/pass"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:textStyle="bold"
+	android:textColor="#FFFFFF"
+	android:textSize="16dp"
+	android:gravity="center"
+	android:layout_marginRight="16dp"
+	android:layout_centerVertical="true"
+	android:background="@drawable/btn_black"
+	android:layout_alignParentRight="true"
+	android:onClick="onSkip"
+	
+    />
+-->
+ 
+ </RelativeLayout>
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+	android:paddingTop="16dp"
+	android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <Button 
+        android:id="@+id/btn_gender"
+        android:text="@string/gender" 
+        android:background="@drawable/btn_blue" 
+        style="@style/ButtonText"
+        android:onClick="q_onclick" />
+    <Button 
+        android:id="@+id/btn_profession"
+        android:text="Profession?" 
+        android:background="@drawable/btn_blue" 
+	
+        style="@style/ButtonText"
+        android:onClick="q_onclick" />
+    <Button 
+        android:id="@+id/btn_nationality"
+        android:text="Nationality?" 
+        android:background="@drawable/btn_blue" 
+
+        style="@style/ButtonText" 
+        android:onClick="q_onclick"/>
+
+    <Button 
+        android:id="@+id/btn_living"
+        android:text="Living or Dead?" 
+        
+        android:background="@drawable/btn_blue"
+ 
+        style="@style/ButtonText"
+        android:onClick="q_onclick" />
+    <Button 
+        android:id="@+id/btn_age"
+        android:text="Age?" 
+        
+        android:background="@drawable/btn_blue"
+        style="@style/ButtonText"
+        android:onClick="q_onclick" />
+    </LinearLayout>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+	android:orientation="horizontal"
+    android:gravity="center_horizontal">
+    <ImageButton 
+        android:id="@+id/hint1"
+        android:src="@drawable/hint_icon_bulb3"
+        android:onClick="hint_onclick"
+        android:background="#0000" 
+        android:layout_margin="3dp"
+        android:contentDescription="hint1"
+		android:paddingRight="5dp"
+        style="@style/ButtonText2" />
+    <ImageButton 
+        android:id="@+id/hint2"
+        android:src="@drawable/hint_icon_bulb3"
+        android:onClick="hint_onclick"
+        android:background="#0000" 
+		android:layout_margin="3dp"
+		android:paddingRight="5dp"
+        style="@style/ButtonText2" />
+	<ImageButton 
+        android:id="@+id/hint3"
+		android:src="@drawable/hint_icon_bulb3"
+		android:onClick="hint_onclick"
+		android:background="#0000" 
+		android:layout_margin="3dp"
+
+        style="@style/ButtonText2" />
+</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:orientation="horizontal"
+		android:gravity="bottom"
+		android:paddingTop="16dp"
+		>
+    <EditText
+        android:id="@+id/answer"
+        android:hint="@string/your_answer"
+        android:layout_weight="1"
+   		android:layout_width="0dp"
+   		android:layout_height="wrap_content"
+   	
+   		android:textColor="#000000"
+   	/>
+    <Button 
+        android:id="@+id/submit"
+        android:text="@string/button_send" 
+        android:background="@drawable/btn_green" 
+        android:layout_marginLeft="5dp"
+        style="@style/ButtonText2" 
+        android:onClick="onSubmitAnswer"/>
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>
+
+

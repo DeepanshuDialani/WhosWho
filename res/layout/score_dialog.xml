@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:background="#151515"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    
+    >
+ 
+    <TextView
+        android:id="@+id/score_title"
+        android:text="Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+       
+  />
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_below="@+id/score_title"
+    android:id="@+id/scroll"
+	android:layout_marginTop="3dp"
+	android:layout_centerHorizontal="true"
+    >
+    <RelativeLayout
+        android:orientation="vertical" 
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	
+    	>
+    <Button 
+        android:id="@+id/s_score"
+        android:text="100" 
+        style="@style/StyleSkip"
+        android:textSize="16dp"
+        android:textColor="#DECDCD"
+		android:drawableLeft="@drawable/hint_icon5"
+        android:drawablePadding="2dp"
+        android:layout_centerHorizontal="true"
+        android:background="#0000"
+        android:gravity="center"
+        /> 
+        <Button 
+        android:id="@+id/s_timer_score"
+        android:text="100" 
+        style="@style/StyleSkip"
+        android:textSize="16dp"
+        android:textColor="#DECDCD"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/s_score"
+        android:drawableLeft="@drawable/timer_icon"
+        android:drawablePadding="2dp"
+        android:layout_marginLeft="16dp"
+        android:background="#0000"
+        /> 
+        <View 
+            android:id="@+id/rule"
+        android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:layout_below="@id/s_timer_score"
+		android:background="#f3ae1b" />
+        <Button 
+        android:id="@+id/s_total_score"
+        android:text="100" 
+        style="@style/StyleSkip"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#DECDCD"
+        android:layout_below="@id/rule"
+        android:drawableLeft="@drawable/trophy"
+        android:drawablePadding="2dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        /> 
+
+    </RelativeLayout>
+ </ScrollView>
+     <Button 
+        android:id="@+id/okbutton"
+        android:text="Next" 
+        android:background="@drawable/btn_transparent" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scroll"
+        style="@style/OkayButton" 
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"/>
+ 
+</RelativeLayout>

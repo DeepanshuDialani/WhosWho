@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dialani.deepanshu.whoswho"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/logo4"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainPage"
+            android:label="@string/title_activity_my_first"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="dialani.deepanshu.whoswho.QuestionPage" android:screenOrientation="portrait" />
+    	<activity android:name="dialani.deepanshu.whoswho.HighScores" android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

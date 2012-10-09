@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:background="#151515"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+ 
+    <TextView
+        android:id="@+id/hint_title"
+        android:text="Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#f3ae1b"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+  />
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_below="@+id/hint_title"
+    android:id="@+id/scroll"
+	android:layout_marginTop="3dp"
+	
+	android:layout_centerHorizontal="true"
+    >
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF" 
+        android:gravity="center"
+        android:layout_marginTop="7dp"
+        />
+ </ScrollView>
+     <Button 
+        android:id="@+id/gotit"
+        android:text="Next" 
+        android:background="@drawable/btn_transparent" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scroll"
+        style="@style/OkayButton" 
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"/>
+ 
+</RelativeLayout>

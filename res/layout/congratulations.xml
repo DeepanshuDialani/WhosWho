@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal"
+    android:background="#151515"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    >
+    <!-- -->
+	<TextView
+	    android:layout_marginTop="15dp"
+	    android:id="@+id/title"
+	    android:gravity="center_vertical"
+	    android:text="Who's Who?"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="#f3ae1b"
+	    android:textSize="55dp"
+	    android:textStyle="bold"
+	    android:shadowColor="#000000"
+	    android:shadowDx="1"
+	    android:shadowDy="1"
+	    android:shadowRadius="4"
+	   />
+<ImageView
+	    android:src="@drawable/logo4"
+	    android:layout_marginTop="15dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="30dp"
+	    android:contentDescription="logo"
+	    />
+    <Button
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/playgame"
+        
+        android:background="@drawable/btn_transparent"
+        style="@style/ButtonText"
+        android:onClick="startGame"
+    />
+    <Button
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:id="@+id/aboutgame"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transparent"
+        style="@style/ButtonText"
+        android:onClick="showAbout"
+    />
+    <Button
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:text="High Scores"
+        android:id="@+id/highscore"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transparent"
+        style="@style/ButtonText"
+        android:onClick="showHighScores"
+    />
+    
+</LinearLayout>

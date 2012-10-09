@@ -1,0 +1,112 @@
+<resources>
+
+    <string name="app_name">Who\'s Who?</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_my_first">Who\'s Who?</string>
+	<string name="your_answer">Your answer</string>
+    <string name="button_send">Submit</string>
+    <string name="question1">Which was the first company to introduce seat-belts?</string>
+    <string name="question2">Which is the parent company of Skoda?</string>
+    <string name="next">Next</string>
+    <string name="gender">Gender?</string>
+    
+    <!-- GENDER -->
+    <string-array
+        name="gender">
+        <item>Male</item>
+        <item>Male</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    
+        <!-- Profession -->
+    <string-array
+        name="profession">
+        <item>Actor</item>
+        <item>Computer Scientist</item>
+        <item>Economist</item>
+        <item>Singer</item>
+        <item>Entrepreneur</item>
+        <item>Actor</item>
+    </string-array>
+    
+        <!-- Nationality -->
+    <string-array
+        name="nationality">
+        <item>American</item>
+        <item>British</item>
+        <item>Indian</item>
+        <item>American</item>
+        <item>British</item>
+        <item>American</item>
+    </string-array>
+    
+        <!-- Living -->
+    <string-array
+        name="living">
+        <item>Living</item>
+        <item>Dead</item>
+        <item>Living</item>
+        <item>Living</item>
+        <item>Living</item>
+        <item>Living</item>
+    </string-array>
+    
+    <!-- Age -->
+    <string-array
+        name="age">
+        <item>48</item>
+        <item>100</item>
+        <item>79</item>
+        <item>26</item>
+        <item>62</item>
+        <item>31</item>
+    </string-array>
+    
+    <!-- Hint1 -->
+    <string-array
+        name="hint1">
+        <item>His first job was dancing in a chicken suit to draw in customers at an El Pollo Loco restaurant on Sunset Blvd. in Hollywood.</item>
+        <item>Since 1966, an award in his name is given annually by the Association for Computing Machinery (ACM) for his technical contributions to the computing community. It is widely considered to be the computing world\'s highest honour, equivalent to the Nobel Prize.</item>
+        <item>He was awarded the 1998 Nobel Memorial Prize in Economic Sciences for his contributions to welfare economics and social choice theory.</item>
+    	<item>She was born Stefani Joanne Angelina Germanotta on March 28, 1986, in New York City, to Cynthia and Joseph Germanotta, an internet entrepreneur. She got her stage name from a Queen song.</item>
+   		<item>His first business venture was a magazine called Student at the age of 16. In 1970, he set up an audio record mail-order business which grew to become a chain of record stores two years later.</item>
+		<item>a</item>
+	</string-array>
+    
+    <!-- Hint2 -->
+    <string-array
+        name="hint2">
+        <item>He owns a production company called Plan-B Entertainment, whose productions include The Departed and Moneyball.</item>
+        <item>He is widely considered to be the father of computer science and artificial intelligence.</item>
+        <item>He helped to create the United Nations Human Development Index and has received many honorary degrees (over 90) from top universities around the world.</item>
+   		<item>She appeared on the MTV reality show \"Boiling Points\" in 2005, with normal clothing and as a brunette! She was unable to keep her cool, and failed to win $100.</item>
+    	<item>He is the 4th richest citizen of the United Kingdom, according to the Forbes 2011 list of billionaires, with an estimated net worth of US$4.2 billion. In December 1999 he was knighted by Queen Elizabeth II in the UK\'s Millennium New Year\'s Honors list for "services to entrepreneurship".</item>
+    	<item>b</item>
+    </string-array>
+    
+    <!-- Hint3 -->
+    <string-array
+        name="hint3">
+        <item>Lt. Aldo Raine, Benjamin Button, Rusty Ryan, Tyler Durden are some of the famous roles that he has portrayed on-screen.</item>
+        <item>His homosexuality resulted in a criminal prosecution in 1952, when homosexual acts were still illegal in the United Kingdom. He accepted chemical castration as an alternative to prison. He died in 1954, just over two weeks before his 42nd birthday, from cyanide poisoning.</item>
+        <item>He has two children:Antara, a journalist and publisher, and Nandana, a Bollywood actress.</item>
+     	<item>She was listed for the Most Followers on Twitter with over 13 million followers in the 2012 edition of the Guinness World Records.</item>
+   		<item>He has also guest starred, usually playing himself, on several television shows, including Friends, Baywatch, Birds of a Feather, Only Fools and Horses, The Day Today, a special episode of the comedy Goodness Gracious Me and Tripping Over.</item>
+   		<item>c</item>
+   </string-array>
+    
+    <!-- Answers -->
+    <string-array
+        name="answers">
+        <item>Brad Pitt</item>
+        <item>Alan Turing</item>
+        <item>Amartya Sen</item>
+        <item>Lady Gaga</item>
+        <item>Richard Branson</item>
+        <item>Natalie Portman</item>
+        </string-array>
+    
+</resources>
