@@ -22,6 +22,8 @@
         </activity>
         <activity android:name="dialani.deepanshu.whoswho.QuestionPage" android:screenOrientation="portrait" />
     	<activity android:name="dialani.deepanshu.whoswho.HighScores" android:screenOrientation="portrait" />
+        <activity android:name="dialani.deepanshu.whoswho.Options" android:screenOrientation="portrait" />	
+    	<activity android:name="dialani.deepanshu.whoswho.CatPref" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

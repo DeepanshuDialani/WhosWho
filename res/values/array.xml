@@ -1,0 +1,35 @@
+<resources>
+<!-- choose level -->
+    <string-array
+        name="levels">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Pro</item>
+    </string-array>
+    <string-array
+        name="levelValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <!-- choose category -->
+    <string-array
+        name="categories">
+        <item>All</item>
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>Politics</item>
+        <item>Sports</item>
+        <item>Academia</item>
+    </string-array>
+    <string-array
+        name="categoryValues">
+        <item>#ALL#</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

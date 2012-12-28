@@ -8,9 +8,7 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    
-    >
+    android:paddingBottom="10dp" >
  
     <TextView
         android:id="@+id/score_title"
@@ -18,82 +16,202 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="#f3ae1b"
         android:textSize="18dp"
-        android:layout_centerHorizontal="true"
-       
-  />
- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true"
-    android:layout_below="@+id/score_title"
-    android:id="@+id/scroll"
-	android:layout_marginTop="3dp"
-	android:layout_centerHorizontal="true"
-    >
-    <RelativeLayout
-        android:orientation="vertical" 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	
-    	>
-    <Button 
-        android:id="@+id/s_score"
-        android:text="100" 
-        style="@style/StyleSkip"
-        android:textSize="16dp"
-        android:textColor="#DECDCD"
-		android:drawableLeft="@drawable/hint_icon5"
-        android:drawablePadding="2dp"
-        android:layout_centerHorizontal="true"
-        android:background="#0000"
-        android:gravity="center"
-        /> 
-        <Button 
-        android:id="@+id/s_timer_score"
-        android:text="100" 
-        style="@style/StyleSkip"
-        android:textSize="16dp"
-        android:textColor="#DECDCD"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/s_score"
-        android:drawableLeft="@drawable/timer_icon"
-        android:drawablePadding="2dp"
-        android:layout_marginLeft="16dp"
-        android:background="#0000"
-        /> 
-        <View 
-            android:id="@+id/rule"
-        android:layout_width="fill_parent"
-		android:layout_height="2dip"
-		android:layout_below="@id/s_timer_score"
-		android:background="#f3ae1b" />
-        <Button 
-        android:id="@+id/s_total_score"
-        android:text="100" 
-        style="@style/StyleSkip"
-        android:textSize="16dp"
-        android:layout_centerHorizontal="true"
-        android:textColor="#DECDCD"
-        android:layout_below="@id/rule"
-        android:drawableLeft="@drawable/trophy"
-        android:drawablePadding="2dp"
-        android:layout_marginLeft="16dp"
-        android:background="@color/transparent"
-        android:gravity="center"
-        /> 
-
-    </RelativeLayout>
- </ScrollView>
-     <Button 
-        android:id="@+id/okbutton"
-        android:text="Next" 
-        android:background="@drawable/btn_transparent" 
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/scroll"
-        style="@style/OkayButton" 
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp"/>
+        android:layout_centerHorizontal="true" />
+	<TableLayout 
+	    android:id="@+id/tl"
+	    android:paddingTop="25dp"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" >
+	<TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp" >
  
-</RelativeLayout>
+	    <Button
+            android:text="Questions" 
+			android:background="@drawable/custom_btn_blue"
+			android:layout_weight="1"
+        	style="@style/ButtonText4" />
+		
+        <TextView
+            android:id="@+id/star"
+            android:text="x"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/question_count"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/colon"
+            android:text=":"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB" 
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/question_score"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp" >
+        
+ 		<ImageButton 
+        	android:src="@drawable/hint_icon_bulb2"
+        	android:background="#0000" 
+       		android:layout_margin="3dp"
+        	android:contentDescription="hint1"
+			android:paddingRight="5dp"
+			android:layout_weight="1" />
+        <TextView
+            android:id="@id/star"
+            android:text="x"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/hint_count"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@id/colon"
+            android:text=":"
+            android:layout_weight="1"
+            android:textColor="#EBEBEB"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/hint_score"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center" />
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="0.5dp">
+        <ImageView
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		android:contentDescription="dotted line"
+    		android:src="@drawable/dottedline" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        >
+        <TextView
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+        <TextView
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+        <TextView
+            android:text="Score"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF" 
+            android:gravity="right"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text=":"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/total_score"
+            android:text="0"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="0.5dp">
+        <ImageView
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    		android:contentDescription="dotted line"
+    		android:src="@drawable/dottedline" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:paddingTop="12dp">
+	    <Button 
+	        android:id="@+id/okbutton"
+	        android:text="Next" 
+	        android:layout_weight="1"
+	        android:background="@drawable/btn_transparent" 
+	        style="@style/OkayButton" />
+    </TableRow>
+	</TableLayout>
+	
+    </RelativeLayout>
+   
+     <!-- <Button
+         android:id="@+id/s_score"
+         style="@style/StyleSkip"
+         android:layout_below="@+id/scroll"
+         android:layout_toLeftOf="@+id/score_title"
+         android:background="#0000"
+         android:drawableLeft="@drawable/hint_icon5"
+         android:drawablePadding="2dp"
+         android:gravity="center"
+         android:text="100"
+         android:textColor="#DECDCD"
+         android:textSize="16dp" />
+
+     <Button
+         android:id="@+id/okbutton"
+         style="@style/OkayButton"
+         android:layout_alignLeft="@+id/scroll"
+         android:layout_below="@+id/s_score"
+         android:layout_marginTop="18dp"
+         android:background="@drawable/btn_transparent"
+         android:text="Next" />
+         -->

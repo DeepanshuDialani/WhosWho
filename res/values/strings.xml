@@ -4,11 +4,29 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_my_first">Who\'s Who?</string>
 	<string name="your_answer">Your answer</string>
-    <string name="button_send">Submit</string>
-    <string name="question1">Which was the first company to introduce seat-belts?</string>
-    <string name="question2">Which is the parent company of Skoda?</string>
+    <string name="button_send">Check</string>
     <string name="next">Next</string>
     <string name="gender">Gender?</string>
+    
+    <!-- Level ID, change this -->
+    <string-array
+        name="levelID">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    	<item>1</item>
+   		<item>1</item>
+	</string-array>
+	
+    <!-- Category ID -->
+    <string-array
+        name="catID">
+        <item>2</item>
+        <item>5</item>
+        <item>5</item>
+    	<item>2</item>
+   		<item>1</item>
+	</string-array>
     
     <!-- GENDER -->
     <string-array
@@ -18,7 +36,14 @@
         <item>Male</item>
         <item>Female</item>
         <item>Male</item>
+        <item>Male</item>
+        <item>Male</item>
+        <item>Male</item>
         <item>Female</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Male</item>
+        <item>Male</item>
     </string-array>
     
         <!-- Profession -->
@@ -29,7 +54,14 @@
         <item>Economist</item>
         <item>Singer</item>
         <item>Entrepreneur</item>
+        <item>Astrophysicist</item>
+        <item>Investor</item>
+        <item>Musician</item>
         <item>Actor</item>
+        <item>Revolutionary</item>
+        <item>Prime Minister</item>
+        <item>Martial Artist</item>
+        <item>Professional Boxer</item>
     </string-array>
     
         <!-- Nationality -->
@@ -41,6 +73,12 @@
         <item>American</item>
         <item>British</item>
         <item>American</item>
+        <item>American</item>
+        <item>Irish</item>
+        <item>American</item>
+        <item>Pakistani</item>
+        <item>Chinese</item>
+        <item>American</item>
     </string-array>
     
         <!-- Living -->
@@ -51,7 +89,14 @@
         <item>Living</item>
         <item>Living</item>
         <item>Living</item>
+        <item>Dead</item>
         <item>Living</item>
+        <item>Living</item>
+        <item>Living</item>
+        <item>Dead</item>
+        <item>Dead</item>
+        <item>Dead</item>
+        <item>Dead</item>
     </string-array>
     
     <!-- Age -->
@@ -62,41 +107,69 @@
         <item>79</item>
         <item>26</item>
         <item>62</item>
-        <item>31</item>
+        <item>Born 1934</item>
+        <item>Born 1930</item>
+        <item>Born 1960</item>
+        <item>Born 1969</item>
+        <item>Born 1928</item>
+        <item>Born 1953</item>
+        <item>Born 1940</item>
+        <item>Born 1942</item>
     </string-array>
     
     <!-- Hint1 -->
     <string-array
         name="hint1">
-        <item>His first job was dancing in a chicken suit to draw in customers at an El Pollo Loco restaurant on Sunset Blvd. in Hollywood.</item>
+        <item>X\'s first job was dancing in a chicken suit to draw in customers at an El Pollo Loco restaurant on Sunset Blvd. in Hollywood.</item>
         <item>Since 1966, an award in his name is given annually by the Association for Computing Machinery (ACM) for his technical contributions to the computing community. It is widely considered to be the computing world\'s highest honour, equivalent to the Nobel Prize.</item>
-        <item>He was awarded the 1998 Nobel Memorial Prize in Economic Sciences for his contributions to welfare economics and social choice theory.</item>
-    	<item>She was born Stefani Joanne Angelina Germanotta on March 28, 1986, in New York City, to Cynthia and Joseph Germanotta, an internet entrepreneur. She got her stage name from a Queen song.</item>
-   		<item>His first business venture was a magazine called Student at the age of 16. In 1970, he set up an audio record mail-order business which grew to become a chain of record stores two years later.</item>
-		<item>a</item>
+        <item>X was awarded the 1998 Nobel Memorial Prize in Economic Sciences for his contributions to welfare economics and social choice theory.</item>
+    	<item>X was born as Stefani Joanne Angelina Germanotta on March 28, 1986, in New York City, to Cynthia and Joseph Germanotta, an internet entrepreneur. X got her stage name from a Queen song.</item>
+   		<item>X\'s first business venture was a magazine called Student at the age of 16. In 1970, X set up an audio record mail-order business which grew to become a chain of record stores two years later.</item>
+		<item>X spent most of his career as a professor of astronomy at Cornell University where he directed the Laboratory for Planetary Studies. He published more than 600 scientific papers and articles and was author, co-author or editor of more than 20 books.</item>
+		<item>X is called the \"Wizard of Omaha\", \"Oracle of Omaha\", or the \"Sage of Omaha\" and is noted for his adherence to the value investing philosophy and for his personal frugality despite his immense wealth. X is also a notable philanthropist, having pledged to give away 99 percent of his fortune to philanthropic causes, primarily via the Gates Foundation.</item>
+		<item>Born as Paul David Hewson, X is a singer, musician, venture capitalist and humanitarian best known for being the main vocalist of a Dublin-based rock band. His nickname is derived from the Latin word for \"good voice\".</item>
+		<item>Often plays a waitress - her characters in Friends (1994), Office Space (1999), The Iron Giant (1999) and Along Came Polly (2004) were all waitresses.</item>
+		<item>As a young medical student, X traveled throughout South America and was moved by the poverty, hunger, and disease he witnessed. His burgeoning desire to help overturn what he saw as the capitalist exploitation of Latin America by the United States prompted his involvement in Guatemala\'s social reforms under President Jacobo Arbenz, whose eventual CIA-assisted overthrow at the behest of the United Fruit Company solidified X\'s political ideology.</item>
+		<item>X inherited leadership of the PPP (Pakistan\'s People Party) after a military coup overthrew her father\'s government and won election in 1988, becoming the first female prime minister of a Muslim nation.</item>
+		<item>X was widely considered by commentators, critics, media and other martial artists to be one of the most influential martial artists of all time, and a pop culture icon of the 20th century. He is often credited with helping to change the way Asians were presented in American films.</item>
+		<item>Originally known as Cassius Clay, at the age of 22 he won the world heavyweight championship from Sonny Liston. X changed his name after joining the Nation of Islam in 1964, subsequently converting to Sunni Islam in 1975.</item>
 	</string-array>
     
     <!-- Hint2 -->
     <string-array
         name="hint2">
-        <item>He owns a production company called Plan-B Entertainment, whose productions include The Departed and Moneyball.</item>
-        <item>He is widely considered to be the father of computer science and artificial intelligence.</item>
-        <item>He helped to create the United Nations Human Development Index and has received many honorary degrees (over 90) from top universities around the world.</item>
-   		<item>She appeared on the MTV reality show \"Boiling Points\" in 2005, with normal clothing and as a brunette! She was unable to keep her cool, and failed to win $100.</item>
-    	<item>He is the 4th richest citizen of the United Kingdom, according to the Forbes 2011 list of billionaires, with an estimated net worth of US$4.2 billion. In December 1999 he was knighted by Queen Elizabeth II in the UK\'s Millennium New Year\'s Honors list for "services to entrepreneurship".</item>
-    	<item>b</item>
+        <item>X owns a production company called Plan-B Entertainment, whose productions include The Departed and Moneyball.</item>
+        <item>X is widely considered to be the father of computer science and artificial intelligence.</item>
+        <item>X helped to create the United Nations Human Development Index and has received many honorary degrees (over 90) from top universities around the world.</item>
+   		<item>X appeared on the MTV reality show \"Boiling Points\" in 2005, with normal clothing and as a brunette! X was unable to keep her cool, and failed to win $100.</item>
+    	<item>X is the 4th richest citizen of the United Kingdom, according to the Forbes 2011 list of billionaires, with an estimated net worth of US$4.2 billion. In December 1999, X was knighted by Queen Elizabeth II in the UK\'s Millennium New Year\'s Honors list for "services to entrepreneurship".</item>
+    	<item>X is known for his popular science books and for the award-winning 1980 television series Cosmos: A Personal Voyage, which he narrated and co-wrote. The book Cosmos was published to accompany the series. X wrote the novel Contact, the basis for a 1997 film of the same name.</item>
+    	<item>X is widely considered the most successful investor of the 20th century. X is the primary shareholder, chairman and CEO of Berkshire Hathaway and consistently ranked among the world\'s wealthiest people.</item>
+    	<item>X is the Managing Director at Elevation Partners, which has investments in Forbes Media, Yelp, SDI media and Facebook.</item>
+    	<item>Has dated- actors Brad Pitt, Vince Vaughn, singer John Mayer and screenwriter Justin Theroux.</item>
+    	<item>A hero of the Cuban revolution, X became Fidel Castro\'s No 2, overseeing the execution of Batista loyalists and later running the industry ministry.</item>
+    	<item>X married a wealthy landowner, Asif Ali Zardari (which would later become the President of Pakistan), in Karachi on December 18, 1987. The couple had three children: son Bilawal and two daughters, Bakhtawar and Aseefa.</item>
+    	<item>X\'s family preferred to call him by his nickname \"Sai Fon\" or \"Little Phoenix.\" It was a girl\'s name, deliberately chosen by his parents because they believed that evil spirits did not like boys in the family (their firstborn was a son who died in infancy). So, by giving a girl\'s name, they believed they could fool the demons into sparing his life!</item>
+    	<item>Nicknamed \"The Greatest\", X was involved in several historic boxing matches. In 1999, X was crowned the \"Sportsman of the Century\" by Sports Illustrated and \"Sports Personality of the Century\" by the BBC.</item>
     </string-array>
     
     <!-- Hint3 -->
     <string-array
         name="hint3">
-        <item>Lt. Aldo Raine, Benjamin Button, Rusty Ryan, Tyler Durden are some of the famous roles that he has portrayed on-screen.</item>
-        <item>His homosexuality resulted in a criminal prosecution in 1952, when homosexual acts were still illegal in the United Kingdom. He accepted chemical castration as an alternative to prison. He died in 1954, just over two weeks before his 42nd birthday, from cyanide poisoning.</item>
-        <item>He has two children:Antara, a journalist and publisher, and Nandana, a Bollywood actress.</item>
-     	<item>She was listed for the Most Followers on Twitter with over 13 million followers in the 2012 edition of the Guinness World Records.</item>
-   		<item>He has also guest starred, usually playing himself, on several television shows, including Friends, Baywatch, Birds of a Feather, Only Fools and Horses, The Day Today, a special episode of the comedy Goodness Gracious Me and Tripping Over.</item>
-   		<item>c</item>
-   </string-array>
+        <item>Lt. Aldo Raine, Benjamin Button, Rusty Ryan, Tyler Durden are some of the famous roles that X has portrayed on-screen.</item>
+        <item>X\'s homosexuality resulted in a criminal prosecution in 1952, when homosexual acts were still illegal in the United Kingdom. He accepted chemical castration as an alternative to prison. X died in 1954, just over two weeks before his 42nd birthday, from cyanide poisoning.</item>
+        <item>X has two children:Antara, a journalist and publisher, and Nandana, a Bollywood actress.</item>
+     	<item>X was listed for the Most Followers on Twitter with over 13 million followers in the 2012 edition of the Guinness World Records.</item>
+   		<item>X has also guest starred, usually playing himself, on several television shows, including Friends, Baywatch, Birds of a Feather, Only Fools and Horses, The Day Today, a special episode of the comedy Goodness Gracious Me and Tripping Over.</item>
+   		<item>His thoughts on the famous \"Pale Blue Dot\" photograph:\n\"From this distant vantage point, the Earth might not seem of any particular interest. But for us, it\'s different. Consider again that dot. That\'s here. That\'s home. That\'s us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives.\"</item>
+   		<item>X\'s DNA report revealed that his paternal ancestors hail from northern Scandinavia, while his maternal ancestors hail from Iberia (present-day Spain) or Estonia. X is also an avid player of bridge, \"Bridge is such a sensational game that I wouldn\'t mind being in jail if I had three cellmates who were decent players and who were willing to keep the game going twenty-four hours a day.\"</item>
+  		<item>In 2005, Time named X the Person of the Year along with Bill and Melinda Gates. X was also a nominee for the Nobel Peace Prize in 2003, 2005, and 2006 for his philanthropy work.</item>
+   		<item>Starred in movies including- Along Came Polly (2004), The Break-Up (2006), Marley and Me (2008), The Bounty Hunter (2010), Horrible Bosses (2011), Wanderlust (2012).</item>
+   		<item>His black and white photograph clicked by Alberto Korda is said to be the most reproduced image of all time, often found printed on tshirts. It was transformed into a Pop Art icon, with help from Andy Warhol, who reproduced it with the same graphic processes he used on Marilyn Monroe.</item>
+   		<item>In 2007, X returned to Pakistan after an extended exile, but was killed in a suicide attack in Rawalpindi.</item>
+   		<item>X had a brief acting career. Movies he acted in, include: Marlowe, The Big Boss, Fist of Fury, Enter The Dragon and Game of Death.</item>
+   		<item>X was well known for his unorthodox fighting style, epitomized by his catchphrase \"float like a butterfly, sting like a bee\", and employing techniques such as the X Shuffle and the rope-a-dope. X brought beauty and grace to the most uncompromising of sports and through the wonderful excesses of skill and character, he became the most famous athlete in the world.</item>
+   	</string-array>
     
     <!-- Answers -->
     <string-array
@@ -106,7 +179,14 @@
         <item>Amartya Sen</item>
         <item>Lady Gaga</item>
         <item>Richard Branson</item>
-        <item>Natalie Portman</item>
+        <item>Carl Sagan</item>
+        <item>Warren Buffett</item>
+        <item>Bono</item>
+        <item>Jennifer Aniston</item>
+        <item>Che Guevara</item>
+        <item>Benazir Bhutto</item>
+        <item>Bruce Lee</item>
+        <item>Muhammad Ali</item>
         </string-array>
     
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+					     android:title="Choose Categories"
+					     android:key="categoryPref"
+					     >
+					     <CheckBoxPreference
+					        android:key="academia"
+					        android:title="Academia" 
+					        android:defaultValue="true"
+					    />
+					    <CheckBoxPreference
+					        android:key="business"
+					        android:title="Business" 
+					        android:defaultValue="true"
+					    />
+					
+					    <CheckBoxPreference
+					        android:key="entertainment"
+					        android:title="Entertainment" 
+					        android:defaultValue="true"
+					    />
+					     <CheckBoxPreference
+					        android:key="politics"
+					        android:title="Politics" 
+					        android:defaultValue="true"
+					    />
+					
+					    <CheckBoxPreference
+					        android:key="sports"
+					        android:title="Sports" 
+					        android:defaultValue="true"
+					    />
+				</PreferenceScreen> 

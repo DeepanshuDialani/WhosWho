@@ -63,5 +63,16 @@
         style="@style/ButtonText"
         android:onClick="showHighScores"
     />
+    <Button
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:id="@+id/options"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transparent"
+        style="@style/ButtonText"
+        android:onClick="showOptions"
+    />
+
     
 </LinearLayout>

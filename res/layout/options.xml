@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Options" >
+
+                <ListPreference     
+                      android:title="Choose Level"
+                      android:key="levels"
+                      android:defaultValue="1"
+                      android:entries="@array/levels"
+                      android:entryValues="@array/levelValues" />
+        <PreferenceScreen
+             android:title="Choose Categories">
+        	<intent android:action="android.intent.action.VIEW" 
+            	android:targetPackage="dialani.deepanshu.whoswho"
+            	android:targetClass="dialani.deepanshu.whoswho.CatPref"/>
+        </PreferenceScreen>
+</PreferenceScreen>

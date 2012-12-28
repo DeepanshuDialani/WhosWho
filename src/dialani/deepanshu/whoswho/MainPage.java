@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainPage extends Activity 
@@ -31,8 +32,17 @@ public class MainPage extends Activity
         TextView title=(TextView)findViewById(R.id.title);
         Typeface tf = Typeface.createFromAsset(getAssets(),"Lobster.otf");
         title.setTypeface(tf);
-       sortHighScores();
+        sortHighScores();
+        
+    	    /*SharedPreferences sharedPreferences = this.getSharedPreferences("optionsPref",0);
+    	    Toast.makeText(MainPage.this, "academia-"+sharedPreferences.getInt("academia", 1), Toast.LENGTH_SHORT).show();
+    	    Toast.makeText(MainPage.this, "business-"+sharedPreferences.getInt("business", 1), Toast.LENGTH_SHORT).show();
+    	    Toast.makeText(MainPage.this, "entertainment-"+sharedPreferences.getInt("entertainment", 1), Toast.LENGTH_SHORT).show();
+    	    Toast.makeText(MainPage.this, "politics-"+sharedPreferences.getInt("politics", 1), Toast.LENGTH_SHORT).show();
+    	    Toast.makeText(MainPage.this, "sports-"+sharedPreferences.getInt("sports", 1), Toast.LENGTH_SHORT).show();
+			*/
 	}
+	
 	private long h[]=new long[3];
 	private String d[]=new String[3];
 	public void startGame(View view)
@@ -72,6 +82,12 @@ public class MainPage extends Activity
 		Intent intent = new Intent(this, HighScores.class);
 		SharedPreferences highscores = this.getSharedPreferences("highscores", 0);
 		//intent.putExtra("hs",arr);
+		finish();
+		startActivity(intent);
+	}
+	public void showOptions(View view)
+	{
+		Intent intent = new Intent(this, Options.class);
 		finish();
 		startActivity(intent);
 	}

@@ -3,9 +3,9 @@ package dialani.deepanshu.whoswho;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.annotation.SuppressLint;
@@ -40,24 +40,26 @@ public class QuestionPage extends Activity
 {
 
 
-	public final static String EXTRA_MESSAGE = "cdialani.deepanshu.whoswho.MESSAGE";
+	public final static String EXTRA_MESSAGE = "dialani.deepanshu.whoswho.MESSAGE";
 	public static int index;
 	public static long scorevalue;
 	public static boolean correctanswer=false;
 	public long totalscore;
     public static int count_hints_click[]=new int[4];
+    private static int countClosedHints;
+    private static int countClosedQuestions;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         Random rnd=new Random();
-		index=rnd.nextInt(5);
+		index=rnd.nextInt(13);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
                                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //scorevalue=100;
         Intent i=getIntent();
-        long t=i.getLongExtra("totalscore",100);
+        long t=i.getLongExtra("totalscore",0);
         totalscore=t;
         //totalscore=totalscore+scorevalue;
         setContentView(R.layout.question_page); //loading the main.xml layout file
@@ -72,12 +74,14 @@ public class QuestionPage extends Activity
         count_hints_click[1]=0;
         count_hints_click[2]=0;
         correctanswer=false;
+        countClosedHints=3;
+        countClosedQuestions=5;
         showInstructions();
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);//prevents keyboard auto popping 
     }
     
     public CountDownTimer mCountDownTimer;
-    public static long timetaken; 
+   // public static long timetaken; 
     public void countdown()
     {
         //final Button pass=(Button)findViewById(R.id.pass);
@@ -106,7 +110,7 @@ public class QuestionPage extends Activity
                 		else
                 			mTextField.setText("01:" + ((millisUntilFinished/1000)-60));
                 	}
-                timetaken=millisUntilFinished/1000;
+               // timetaken=millisUntilFinished/1000;
             }
 
             public void onFinish() 
@@ -236,23 +240,38 @@ public class QuestionPage extends Activity
     	switch(view.getId())
     	{
     	case R.id.btn_gender:		if(clicked_button.getText().equals("Gender?"))
-    								updateScore(5);
+    								{
+    										updateScore(5);
+    										countClosedQuestions--;
+    								}
     								clicked_button.setText(gender[index]);
     				    			break;
     	case R.id.btn_profession:   if(clicked_button.getText().equals("Profession?"))
-    								updateScore(5);
+							    	{
+											updateScore(5);
+											countClosedQuestions--;
+							    	}
     								clicked_button.setText(profession[index]);
 					    			break;
     	case R.id.btn_nationality:	if(clicked_button.getText().equals("Nationality?"))
-    								updateScore(5);
+							    	{
+											updateScore(5);
+											countClosedQuestions--;
+							    	}
     								clicked_button.setText(nationality[index]);
 					    			break;
 		case R.id.btn_living: 		if(clicked_button.getText().equals("Living or Dead?"))
-									updateScore(5);
+									{
+											updateScore(5);
+											countClosedQuestions--;
+									}
 									clicked_button.setText(living[index]);
 				    				break;
 		case R.id.btn_age: 	        if(clicked_button.getText().equals("Age?"))
-									updateScore(5);
+									{
+											updateScore(5);
+											countClosedQuestions--;
+									}
 									clicked_button.setText(age[index]);
 									break;
     	}
@@ -303,10 +322,10 @@ public class QuestionPage extends Activity
     	}
         if (!isFinishing())
         dialog.show();
-        openAllQuestions();
+        //openAllQuestions();
         
     }
-    public void openAllQuestions()
+   /* public void openAllQuestions()
     {
     	View gender= findViewById(R.id.btn_gender);
     	View profession= findViewById(R.id.btn_profession);
@@ -318,7 +337,8 @@ public class QuestionPage extends Activity
     	q_onclick(nationality);
     	q_onclick(living);
     	q_onclick(age);
-    }
+    	countClosedQuestions=0;
+    }*/
     
     public void onSkip()
     {
@@ -347,21 +367,22 @@ public class QuestionPage extends Activity
     }
     public void updateScore(int t)
     {
-    	Button score=(Button)findViewById(R.id.score);
+    	//Button score=(Button)findViewById(R.id.score);
     	//showDeductedScore(t);
     	scorevalue=scorevalue-t;
-    	totalscore=totalscore-t;
-    	score.setText(""+totalscore);
+    	//totalscore=totalscore-t;
+    	//score.setText(""+totalscore);
     }
     public void updateScore2(int t, int count)
     {
     	if(count==1)
     	{	
-    		Button score=(Button)findViewById(R.id.score);
+    		//Button score=(Button)findViewById(R.id.score);
     		//showDeductedScore(t);
     		scorevalue=scorevalue-t;
-    		totalscore=totalscore-t;
-    		score.setText(""+totalscore);
+    		//totalscore=totalscore-t;
+    		countClosedHints--;
+    		//score.setText(""+totalscore);
     	}
     }
    
@@ -369,7 +390,7 @@ public class QuestionPage extends Activity
     {
     	Button score=(Button)findViewById(R.id.score);
     	scorevalue=scorevalue-t;
-    	totalscore=totalscore-t;
+    	//totalscore=totalscore-t;
     }
     public static long finalscore;
     public void showScoreOnCorrect()
@@ -377,15 +398,27 @@ public class QuestionPage extends Activity
     	final Dialog dialog = new Dialog(context);
     	dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
     	dialog.setContentView(R.layout.score_dialog);
-    	Button timer= (Button) dialog.findViewById(R.id.s_timer_score);
-    	Button total= (Button) dialog.findViewById(R.id.s_total_score);
-    	Button levelscore= (Button) dialog.findViewById(R.id.s_score);
+    	//Button timer= (Button) dialog.findViewById(R.id.s_timer_score);
+    	//Button total= (Button) dialog.findViewById(R.id.s_total_score);
     	TextView score_title = (TextView) dialog.findViewById(R.id.score_title);
     	score_title.setText("Awesome!");
-    	timer.setText(""+timetaken);
-    	levelscore.setText(""+totalscore);
-    	finalscore=timetaken+totalscore;
-    	total.setText(""+finalscore);
+    	//timer.setText(""+timetaken);
+    	//finalscore=timetaken+totalscore;
+    	//finalscore=100+totalscore;
+    	TextView qcount=(TextView) dialog.findViewById(R.id.question_count);
+    	qcount.setText(""+countClosedQuestions);
+    	int qs=countClosedQuestions*5;
+    	TextView qscore=(TextView) dialog.findViewById(R.id.question_score);
+    	qscore.setText(""+qs);
+    	TextView hcount=(TextView) dialog.findViewById(R.id.hint_count);
+    	hcount.setText(""+countClosedHints);
+    	int hs=countClosedHints*10;
+    	TextView hscore=(TextView) dialog.findViewById(R.id.hint_score);
+    	hscore.setText(""+hs);
+    	int levelscore=100+qs+hs;
+    	finalscore=levelscore+totalscore;
+    	final TextView lscore= (TextView) dialog.findViewById(R.id.total_score);
+    	lscore.setText(""+levelscore);
     	final Intent intent = new Intent(this, QuestionPage.class);
     	Button dialogButton = (Button) dialog.findViewById(R.id.okbutton);
         dialogButton.setOnClickListener(new OnClickListener() {
